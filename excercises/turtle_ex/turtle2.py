@@ -20,7 +20,7 @@ def myTurtle():
     radius = 60
     side_length = find_lenth(radius, num_sides)
     angle = 360.0 // num_sides 
-    delta = side_length  #this value you must count
+    delta = radius*2  #this value you must count
     colors = ['blue','white','black','green']
     for i in range(num_shape):
         polygon.penup()
