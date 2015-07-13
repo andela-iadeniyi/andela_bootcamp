@@ -1,8 +1,29 @@
-def is_prime(x):
-	if x >= 2:
-		for i in range(2, x):
-			if i % i == 0:
-				return False
-			else:
-  				return True
-is_prime(4)
+class PrimeChecker(object):
+  #number = "number"
+  
+  def __init__(self, number=''):
+    self.number = str(number)
+  
+  def is_prime(self):
+    if len(self.number) != 0:
+      	#con = int(self.number)
+      	dec = '.'
+      	for i in self.number.split():
+      		if dec in i:
+        		return False
+      	else:
+      		con = int(self.number)
+      		i = 2
+        	if con < 2:
+          		return False
+        	while i < con:
+          		if con % i == 0:
+					return False
+          		else:
+					i += 1
+			return True
+    else:
+		return False
+
+a = PrimeChecker(2)
+print a.is_prime()
